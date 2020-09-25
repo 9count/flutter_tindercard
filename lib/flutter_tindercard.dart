@@ -61,7 +61,7 @@ class TinderSwapCard extends StatefulWidget {
         this._swipeUp = swipeUp,
         this._swipeDown = swipeDown,
         assert(maxWidth > minWidth && maxHeight > minHeight),
-        this._allowVerticalMovement = allowVerticalMovement,
+        this._allowVerticalMovement = allowVerticalMovement {
     double widthGap = maxWidth - minWidth;
     double heightGap = maxHeight - minHeight;
 

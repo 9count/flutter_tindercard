@@ -328,6 +328,9 @@ class CardAnimation {
     } else if (_TinderSwapCardState._trigger == TriggerDirection.left) {
       endX = beginAlign.x - swipeEdge;
       endY = beginAlign.y + 0.5;
+    } else if (_TinderSwapCardState._trigger == TriggerDirection.right) {
+      endX = beginAlign.x + swipeEdge;
+      endY = beginAlign.y - 0.5;
     } else if (_TinderSwapCardState._trigger == TriggerDirection.rewind) {
       endX = baseAlign.x;
       endY = baseAlign.y;
@@ -344,8 +347,8 @@ class CardAnimation {
           ? (beginAlign.x > swipeEdge ? beginAlign.x + 10.0 : baseAlign.x)
           : (beginAlign.x < -swipeEdge ? beginAlign.x - 10.0 : baseAlign.x);
     } else {
-      endX = beginAlign.x + swipeEdge;
-      endY = beginAlign.y + 0.5;
+      endX = baseAlign.x;
+      endY = baseAlign.y;
     }
     return _TinderSwapCardState._trigger == TriggerDirection.rewind
         ? AlignmentTween(
